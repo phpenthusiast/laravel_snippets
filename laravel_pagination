@@ -1,0 +1,8 @@
+# How to append query strings to Laravel pagination?
+## In the controller
+$querystringArray = \Input::only(['x','y']); // x and y are the names of the query parameters
+
+## In the view
+<div class="col-md-12" style="text-align:center">
+{!! $list->appends($querystringArray)->render() !!} 
+</div>
